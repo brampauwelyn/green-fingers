@@ -25,7 +25,7 @@ def resetGPIO(relay):
 
 # Reset GPIO's
 # Disable Relay by default
-resetGPIO(relay1, False)
+resetGPIO(relay1)
 
 while(1):
     print(colors.BLUE + "Watering Plants...")
@@ -33,7 +33,7 @@ while(1):
     #Should give 100 ml water
     sleep(13.5)
     # Disable Relay
-    resetGPIO(relay1, False)
+    resetGPIO(relay1)
     print (color.GREEN + "Done Watering Plants")
     break
 # clean up GPIO
