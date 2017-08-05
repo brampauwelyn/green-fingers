@@ -29,13 +29,12 @@ resetGPIO(relay1, False)
 
 while(1):
     print(colors.BLUE + "Watering Plants...")
-    # GPIO.output(relay1,True)
+    GPIO.output(relay1,True)
     #Should give 100 ml water
     sleep(13.5)
     # Disable Relay
     resetGPIO(relay1, False)
     print (color.GREEN + "Done Watering Plants")
-    return False
     break
 # clean up GPIO
 # GPIO.cleanup()
