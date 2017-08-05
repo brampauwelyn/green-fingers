@@ -18,7 +18,6 @@ class colors:
 # Function to Reset GPIOs
 def resetGPIO(relay):
     GPIO.output(relay1,False)
-    GPIO.cleanup()
 
 # 27 sec --> 200ml
 # 13.5 sec --> 100ml
