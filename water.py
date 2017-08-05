@@ -1,8 +1,7 @@
-import RPi.GPIO as GPIO
+ from gpiozero import Button
+ button = Button(3)
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(3, GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+ button.wait_for_press()
+ print('You pushed me')
 
-while True:
-    if(GPIO.input(3) == 1):
-        print("Yeah")
+ 
