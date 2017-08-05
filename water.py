@@ -3,7 +3,7 @@ import time as t
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(3, GPIO.OUT, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(3, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 GPIO.setup(2, GPIO.OUT, )
 
