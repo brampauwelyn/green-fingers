@@ -10,3 +10,5 @@ while(1):
         print "Button 1 was pressed"
         GPIO.output(relay1,True)
         sleep(.5)
+    else:
+        GPIO.output(relay1,False)
