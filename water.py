@@ -5,12 +5,17 @@ button1 = 3
 relay1 = 17
 GPIO.setup(button1, GPIO.IN, pull_up_down = GPIO.PUD_UP)
 GPIO.setup(relay1, GPIO.OUT)
-while(1):
-    if GPIO.input(button1) == 0:
-        print "Button 1 was pressed"
-        GPIO.output(relay1,True)
-        sleep(.5)
-    else:
-        GPIO.output(relay1,False)
 
+# 27 sec --> 200ml
+# 13.5 sec --> 100ml
+
+while(1):
+    print "Watering Plants"
+    GPIO.output(relay1,True)
+    #Should give 100 ml water
+    sleep(13.5)
+    False
+# clean up GPIO
 GPIO.cleanup()
+# Exit script
+exit()
