@@ -12,3 +12,5 @@ while(1):
         sleep(.5)
     else:
         GPIO.output(relay1,False)
+
+GPIO.cleanup()
