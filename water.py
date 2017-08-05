@@ -35,6 +35,7 @@ while(1):
     # Disable Relay
     resetGPIO(relay1, False)
     print (color.GREEN + "Done Watering Plants")
+    return False
     break
 # clean up GPIO
 # GPIO.cleanup()
