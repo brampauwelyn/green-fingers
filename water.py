@@ -1,5 +1,6 @@
-from time import sleep
 import RPi.GPIO as GPIO
+from time import sleep
+from notify import notify
 GPIO.setmode(GPIO.BCM)
 relay1 = 17
 GPIO.setup(relay1, GPIO.OUT)
@@ -34,6 +35,8 @@ while(1):
     # Disable Relay
     resetGPIO(relay1)
     print (colors.GREEN + "Done Watering Plants")
+    #Call function notify to send email notification
+    notify()
     break
 # clean up GPIO
 GPIO.cleanup()
