@@ -7,7 +7,7 @@
 def notify():
     import smtplib
     # import variables from config file
-    from config import username, password, fromEmail, toEmail
+    from config import USERNAME, PASSWORD, FROM_EMAIL, TO_EMAIL
     msg = "\r\n".join([
       "From:" + fromEmail,
       "To:" + toEmail,
@@ -18,6 +18,6 @@ def notify():
     server = smtplib.SMTP('smtp.gmail.com:587')
     server.ehlo()
     server.starttls()
-    server.login(username,password)
-    server.sendmail(fromEmail, toEmail, msg)
+    server.login(USERNAME,PASSWORD)
+    server.sendmail(FROM_EMAIL, TO_EMAIL, msg)
     server.quit()
