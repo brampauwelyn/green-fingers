@@ -9,8 +9,8 @@ def notify():
     # import variables from config file
     from config import USERNAME, PASSWORD, FROM_EMAIL, TO_EMAIL
     msg = "\r\n".join([
-      "From:" + fromEmail,
-      "To:" + toEmail,
+      "From:" + FROM_EMAIL,
+      "To:" + TO_EMAIL,
       "Subject: You're plants got water",
       "",
       "You're plants got water"
