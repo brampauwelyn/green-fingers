@@ -24,11 +24,10 @@ def resetGPIO(relay):
 # 27 sec --> 200ml
 # 13.5 sec --> 100ml
 
-# Reset GPIO's
-# Disable Relay by default
-resetGPIO(relay1)
 
-while(1):
+# Function to start relay and give water
+def water():
+    resetGPIO(relay1)
     print(colors.BLUE + "Watering Plants...")
     GPIO.output(relay1,True)
     #Should give 100 ml water
@@ -40,9 +39,7 @@ while(1):
     weather()
     #Call function notify to send email notification
     notify()
-    break
-
-# clean up GPIO
-GPIO.cleanup()
-# Exit script
-exit()
+    # clean up GPIO
+    GPIO.cleanup()
+    # Exit script
+    exit()
