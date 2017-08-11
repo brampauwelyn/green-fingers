@@ -2,17 +2,11 @@
 # http://openweathermap.org/api
 # Make an account and add your API key in the config.py file (weather_api_key)
 
-# SETTINGS
-UNIT = 'metric'
-CITY = 'oudergem'
-# ISO Code country
-COUNTRY = 'BE'
-
 def weather():
     import requests
     import json
     # Import your open weather API key from the config file
-    from config import WEATHER_API_KEY
+    from config import UNIT, CITY, COUNTRY, WEATHER_API_KEY
     url = "http://api.openweathermap.org/data/2.5/weather?q=%s,%s&units=%s&APPID=%s" % (CITY, COUNTRY, UNIT, WEATHER_API_KEY)
     print url
     response = requests.get(url)
