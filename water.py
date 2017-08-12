@@ -31,7 +31,7 @@ def water():
     print(colors.BLUE + "Watering Plants...")
     GPIO.output(relay1,True)
     #Should give 100 ml water
-    sleep(13.5)
+    sleep(60)
     # Disable Relay
     resetGPIO(relay1)
     print (colors.GREEN + "Done Watering Plants")
@@ -43,3 +43,5 @@ def water():
     GPIO.cleanup()
     # Exit script
     exit()
+
+water()
