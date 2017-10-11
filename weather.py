@@ -19,3 +19,5 @@ def weather():
     print weather
     print temperature
     print min_temperature
+
+weather()

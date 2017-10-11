@@ -38,7 +38,7 @@ def water():
     #Get Weather information
     weather()
     #Call function notify to send email notification
-    notify()
+    notify_mailgun()
     # clean up GPIO
     GPIO.cleanup()
     # Exit script
