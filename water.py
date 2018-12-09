@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 from time import sleep
 from weather import weather
 from notify import notify
-relay1 = 21
+relay1 = 4
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(relay1, GPIO.OUT)
