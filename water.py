@@ -22,17 +22,13 @@ class colors:
 def resetGPIO(relay):
     GPIO.output(relay1,GPIO.LOW)
 
-# 27 sec --> 200ml
-# 13.5 sec --> 100ml
-
 
 # Function to start relay and give water
 def water():
     resetGPIO(relay1)
     print(colors.BLUE + "Watering Plants...")
     GPIO.output(relay1,GPIO.HIGH)
-    #Should give 100 ml water
-    sleep(90)
+    sleep(30)
     # Disable Relay
     resetGPIO(relay1)
     print (colors.GREEN + "Done Watering Plants")

@@ -16,8 +16,6 @@ def weather():
     temperature = weather['temp']
     min_temperature = weather['temp_min']
     max_temperature = weather['temp_max']
-    print weather
-    print temperature
-    print min_temperature
+    print "Today's temperature in {}: {} degrees".format(CITY, temperature)
 
 weather()
