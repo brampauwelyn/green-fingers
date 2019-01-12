@@ -8,7 +8,6 @@ def weather():
     # Import your open weather API key from the config file
     from config import UNIT, CITY, COUNTRY, WEATHER_API_KEY
     url = "http://api.openweathermap.org/data/2.5/weather?q=%s,%s&units=%s&APPID=%s" % (CITY, COUNTRY, UNIT, WEATHER_API_KEY)
-    print url
     response = requests.get(url)
     content = response.content
     json_data = json.loads(content)
