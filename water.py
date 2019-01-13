@@ -26,8 +26,8 @@ def resetGPIO(relay):
 def water():
     resetGPIO(relay1)
     print(colors.BLUE + "Watering Plants...")
-    # GPIO.output(relay1,GPIO.HIGH)
-    # sleep(30)
+    GPIO.output(relay1,GPIO.HIGH)
+    sleep(30)
     # Disable Relay
     resetGPIO(relay1)
     print (colors.GREEN + "Done Watering Plants")
